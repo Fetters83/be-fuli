@@ -144,19 +144,6 @@ const seed = ( {
             user_id INT REFERENCES users(user_id) NOT NULL);           
             `)
     }).then(()=>{
-        return db.query(`
-            CREATE TABLE user_appointments (
-            appointment_id INT REFERENCES client_appointments(appointment_id) NOT NULL,
-            treatment_type_id INT REFERENCES treatment_types(treatment_type_id) NOT NULL,
-            problem_type_id INT REFERENCES problem_types(problem_type_id) NOT NULL,
-            client_id INT REFERENCES clients(client_id) NOT NULL,
-            date DATE NOT NULL,
-            time VARCHAR NOT NULL,
-            completed BOOLEAN,
-            cancel_type_id INT REFERENCES cancel_types(cancel_type_id) NOT NULL,
-            user_id INT REFERENCES users(user_id) NOT NULL);           
-            `)
-    }).then(()=>{
         const insertUsersQueryStr = format(
             `INSERT INTO users (username) VALUES %L;`,
             usersData.map(({username})=>[username])
@@ -262,25 +249,7 @@ const seed = ( {
         );
         return db.query(insertClientAppointmentsQueryStr);
     }) 
-    .then(()=>{
-        const insertUserAppointmentsQueryStr = format(
-            'INSERT INTO user_appointments (appointment_id,treatment_type_id,problem_type_id,client_id,date,time,completed,cancel_type_id,user_id) VALUES %L;',
-            userAppointmentsData.map(
-                ({
-                    appointment_id,
-                    treatment_type_id,
-                    problem_type_id,
-                    client_id,
-                    date,
-                    time,
-                    completed,
-                    cancel_type_id,
-                    user_id
-                })=>[appointment_id,treatment_type_id,problem_type_id,client_id,date,time,completed,cancel_type_id,user_id]
-            )
-        );
-        return db.query(insertUserAppointmentsQueryStr);
-    })  
+
 };
 
 module.exports = seed;

@@ -23,10 +23,10 @@ apiRouter.use('/cancelTypes',cancelTypesRouter)
 apiRouter.use('/clients',clientRouter)
 
 //Router for ethnicities
-/apiRouter.use('/ethnicities',ethnicitiesRouter)
+apiRouter.use('/ethnicities',ethnicitiesRouter)
 
 //Router for genders
-apiRouter.use('/genders')
+//apiRouter.use('/genders')
 
 //Router for problem types
 //apiRouter.use('/problemTypes')

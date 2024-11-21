@@ -1,0 +1,23 @@
+module.exports=[{
+    gender_name:"female",
+    status:true
+},
+{
+    gender_name:"male",
+    status:true
+},
+{
+    gender_name:"Nonbinary",
+    status:true
+},
+{
+    gender_name:"Transgender",
+    status:true
+},{
+    gender_name:"Cisgender",
+    status:true
+},
+{
+    gender_name:"Demigender",
+    status:true
+}]

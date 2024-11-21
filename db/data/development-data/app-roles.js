@@ -1,0 +1,16 @@
+module.exports=[{
+    role_name:"admin",
+    status:true
+},
+{
+    role_name:"practitioner",
+    status:true
+},
+{
+    role_name:"manager",
+    status:true
+},
+{
+    role_name:"operations",
+    status:true
+}]

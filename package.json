@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@supabase/supabase-js": "^2.46.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-router": "^0.0.1",
+    "pg": "^8.13.1",
+    "pg-format": "^1.0.4"
+  },
+  "scripts": {
+    "setup-dbs": "psql -f ./db/setup.sql",
+    "start": "node listen.js",
+    "seed": "node ./db/seeds/run-seed.js"
+  },
+  "name": "be-fuli",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC"
+}

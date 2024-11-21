@@ -1,0 +1,12 @@
+exports.appRolesData = require('./app-roles.js');
+exports.cancelTypesData = require('./cancel-types.js');
+exports.clientAppointmentsData = require('./client-appointments.js');
+exports.clientDetailsData = require('./client-details.js');
+exports.clientsData = require('./clients.js');
+exports.ethnicitiesData = require('./ethnicities.js');
+exports.gendersData = require('./genders.js');
+exports.problemTypesData = require('./problem-types.js');
+exports.treatmentTypesData = require('./treatment-types.js');
+exports.userAppointmentsData = require('./user-appointments.js');
+exports.userDetailsData = require('./user-details.js');
+exports.usersData = require('./users.js');

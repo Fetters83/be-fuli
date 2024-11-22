@@ -3,6 +3,7 @@ const cancelTypesRouter = require('./cancelTypes-router');
 const clientAppointmentsRouter = require('./clientAppointment-router');
 const clientRouter = require('./clientRoutes-router');
 const ethnicitiesRouter = require('./ethncities-routes');
+const gendersRouter = require('./gendersRoutes-router');
 const usersRouter = require('./userRoutes');
 
 const apiRouter = require('express').Router()
@@ -26,7 +27,7 @@ apiRouter.use('/clients',clientRouter)
 apiRouter.use('/ethnicities',ethnicitiesRouter)
 
 //Router for genders
-//apiRouter.use('/genders')
+apiRouter.use('/genders',gendersRouter)
 
 //Router for problem types
 //apiRouter.use('/problemTypes')
